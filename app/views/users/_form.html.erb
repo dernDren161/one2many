@@ -1,0 +1,38 @@
+<div align = "center">
+<%= form_for @user do |f| %>
+  <p>
+  <%= f.label :user, class: "site-field"%>
+  <%= f.text_field :user%><br>
+  </p>
+  <p>
+  <%= f.label :email, class: "username-field"%>
+  <%= f.text_field :email%><br>
+ </p>
+  <%= f.label :password, class: "password-field"%>
+  <%= f.text_field :password%><br>
+  <p>
+    <%= f.submit(@user.new_record? ? "Sign Up" : "Update Acount", class: 'btn btn-primary btn-large') %>
+  </p>
+<% end %>
+</div>
+<% if @user.errors.any? %>
+ <div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+   <div class="panel panel-danger">
+    <div class="panel-heading">
+     <h2 class="panel-title">
+      <%= pluralize(@user.errors.count, "error") %>
+      prohibited this article from being saved:
+     </h2>
+     <div class="panel-body">
+      <ul>
+       <% @user.errors.full_messages.each do |msg|%>
+        <li><%= msg %></li>
+       <% end %>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+<% end %>

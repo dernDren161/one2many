@@ -1,0 +1,31 @@
+<div align="center" >
+<h1><b><em>Your List</em></b></h1>
+</div>
+<body>
+<table style="width:70%; margin: 115px auto;" cellspacing="30px" style="height:136px;">
+  <tr>
+    <th>Site Name</th>
+    <th>Username</th>
+    <th>Password</th>
+    <th>Signature</th>
+  </tr>
+  <% obj.each do |info|%>
+  <tr>
+    <td><%= info.site%></td>
+    <td><%= info.username[0,3] + "****"%></td>
+    <td><%= "******"%></td>
+    <td><%= info.signature%></td>
+    <td><%= link_to 'Edit', edit_info_path(info), class: "btn btn-xs btn-primary"%></td>
+    <td><%= link_to 'Show', info_path(info), class: "btn btn-xs btn-primary"%></td>
+    <td><%= link_to 'Delete', info_path(info), method: :delete, data: {confirm: "Are you sure you want to delete the information?"}, class: "btn btn-xs btn-danger" %></td>
+  </tr>
+  <%end%>
+</table>
+<style>
+  table, th, td{
+  border: 2px solid blue;
+  text-align: center;
+}
+</style>
+
+</body>

@@ -1,0 +1,42 @@
+<div align = "center">
+<%= form_for @info do |f| %>
+  <p>
+  <%= f.label :site, class: "site-field"%>
+  <%= f.text_field :site%><br>
+  </p>
+  <p>
+  <%= f.label :username, class: "username-field"%>
+  <%= f.text_field :username%><br>
+ </p>
+  <%= f.label :password, class: "password-field"%>
+  <%= f.text_field :password%><br>
+  <p>
+  <%= f.label :signature, class: "signature-field"%>
+  <%= f.text_field :signature%><br>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+</div>
+<% if @info.errors.any? %>
+ <div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+   <div class="panel panel-danger">
+    <div class="panel-heading">
+     <h2 class="panel-title">
+      <%= pluralize(@info.errors.count, "error") %>
+      prohibited this article from being saved:
+     </h2>
+     <div class="panel-body">
+      <ul>
+       <% @info.errors.full_messages.each do |msg|%>
+        <li><%= msg %></li>
+       <% end %>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+ </div>
+<% end %>

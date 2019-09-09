@@ -1,0 +1,48 @@
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+#logo {
+ float: left;
+ font-size: 1em;
+ color: black;
+ text-transform: uppercase;
+ letter-spacing: -1px;
+ font-weight: bold;
+}
+#logo:hover {
+ color: #FF0000;
+ text-decoration: none;
+}
+.site-field{
+  border: 1px solid black;
+  background-color: lightblue;
+  padding-right: 35px;
+  padding-left: 35px;
+}
+.username-field{
+  border: 1px solid black;
+  background-color: lightblue;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+.password-field{
+  border: 1px solid black;
+  background-color: lightblue;
+  padding-right: 25px;
+  padding-left: 8px;
+}
+.signature-field{
+  border: 1px solid black;
+  background-color: lightblue;
+  padding-right: 25px;
+  padding-left: 10px;
+}
+.orient{
+     text-align: center;
+}
+#test{
+  float: right;
+  margin-right: 46%;
+}

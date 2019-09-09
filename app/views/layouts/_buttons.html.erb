@@ -1,0 +1,23 @@
+<body>
+<ul class="nav nav-pills" style="width:70%; margin-left: 200px;" >
+  <li><%= link_to "Home", root_path, class: "active", id: "logo", role: "presentation"%></li>
+  <li><%= link_to "Add-Info", new_info_path, class: "add-info"%></li>
+  <li><%= link_to "View-Info", infos_path, class: "view-info"%></li>
+</ul>
+<ul class="nav navbar-nav navbar-right">
+        <% if logged_in? %>
+          <li><%= link_to 'Log out', logout_path, method: :delete %></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+          <% else %>
+          <% end %>
+      </ul>
+</body>
