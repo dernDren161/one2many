@@ -9,4 +9,4 @@ Things you may want to cover:
 
 * Database initialization -- Credentials for database access: ( username: one2many, password: may2one )
 
-* Run -- bundle install
+* Run -- `bundle install` before running it on `localhost:3000`
